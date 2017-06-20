@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <contacts>
+    <contact>
+      <contactid></contactid>
+      <contactyourid></contactyourid>
+      <contactname></contactname>
+      <contactname1></contactname1>
+      <contactname2></contactname2>
+      <contactstatus></contactstatus>
+      <contacttypeid></contacttypeid>
+      <contacttypename></contacttypename>
+      <contactperson></contactperson>
+      <contactaddress1></contactaddress1>
+      <contactaddress2></contactaddress2>
+      <contactcity></contactcity>
+      <contacttelephone></contacttelephone>
+      <contactemail></contactemail>
+      <contactcountrycode></contaccountrycode>
+    </contact>
+    <contact>
+      <contactid></contactid>
+      <contactyourid></contactyourid>
+      <contactname></contactname>
+      <contactname1></contactname1>
+      <contactname2></contactname2>
+      <contacttypeid></contacttypeid>
+      <contacttypename></contacttypename>
+      <contactperson></contactperson>
+      <contactaddress1></contactaddress1>
+      <contactaddress2></contactaddress2>
+      <contacttelephone></contacttelephone>
+      <contactemail></contactemail>
+      <contactcity></contactcity>
+      <contactcountrycode></contaccountrycode>
+    </contact>
+  </contacts>
+</response>
