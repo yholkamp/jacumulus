@@ -16,11 +16,10 @@ public class SerializationHelperTest {
 
   @Test
   public void serializeRequest_addInvoiceResponse() throws Exception {
-    AddInvoiceRequest request = new AddInvoiceRequest();
-    request.setTestMode(1);
     Customer customer = new Customer();
     customer.setCity("Rotterdam");
-    request.setCustomer(customer);
+    AddInvoiceRequest request = new AddInvoiceRequest(customer);
+    request.setTestMode(1);
 
     String serialized = SerializationHelper.serializeToXml(request);
     String expected ="<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><myxml><testmode>1</testmode><customer><city>Rotterdam</city></customer></myxml>";

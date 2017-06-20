@@ -25,13 +25,12 @@ public class AcumulusClientTest {
   
   @Test
   public void serializeRequest() throws Exception {
-    AddInvoiceRequest addInvoiceRequest = new AddInvoiceRequest();
     Customer customer = new Customer();
     customer.setEmail("test@bar.com");
     Invoice invoice = new Invoice();
     invoice.setNumber("12345");
     customer.setInvoice(invoice);
-    addInvoiceRequest.setCustomer(customer);
+    AddInvoiceRequest addInvoiceRequest = new AddInvoiceRequest(customer);
     String output = client.serializeRequest(addInvoiceRequest);
     String expected = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><myxml><testmode>1</testmode><contract><contractcode>4242</contractcode><username>user</username><password>password</password></contract>" +
         "<customer><invoice><number>12345</number></invoice><email>test@bar.com</email></customer></myxml>";

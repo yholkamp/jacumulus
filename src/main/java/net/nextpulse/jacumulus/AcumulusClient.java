@@ -62,8 +62,7 @@ public class AcumulusClient {
    * @throws IOException   if there was an error contacting the Acumulus servers
    */
   public InvoiceResponse addInvoice(Customer customer) throws JAXBException, IOException {
-    AddInvoiceRequest request = new AddInvoiceRequest();
-    request.setCustomer(customer);
+    AddInvoiceRequest request = new AddInvoiceRequest(customer);
     return performAndDeserialize("invoices/invoice_add.php", request, InvoiceResponse.class);
   }
   
@@ -77,7 +76,6 @@ public class AcumulusClient {
    */
   public ListInvoicesResponse listIncomingInvoices(String contactId) throws JAXBException, IOException {
     ListInvoicesRequest request = new ListInvoicesRequest(contactId);
-    Class<ListInvoicesResponse> clazz = ListInvoicesResponse.class;
     return performAndDeserialize("contacts/contact_invoices_incoming.php", request, ListInvoicesResponse.class);
   }
   
@@ -91,7 +89,6 @@ public class AcumulusClient {
    */
   public ListInvoicesResponse listOutgoingInvoices(String contactId) throws JAXBException, IOException {
     ListInvoicesRequest request = new ListInvoicesRequest(contactId);
-    Class<ListInvoicesResponse> clazz = ListInvoicesResponse.class;
     return performAndDeserialize("contacts/contact_invoices_outgoing.php", request, ListInvoicesResponse.class);
   }
   

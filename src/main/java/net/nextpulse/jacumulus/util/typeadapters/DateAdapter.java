@@ -1,4 +1,4 @@
-package net.nextpulse.jacumulus.util;
+package net.nextpulse.jacumulus.util.typeadapters;
 
 import org.joda.time.DateTime;
 

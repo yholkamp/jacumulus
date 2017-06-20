@@ -1,9 +1,12 @@
-package net.nextpulse.jacumulus.util;
+package net.nextpulse.jacumulus.util.typeadapters;
 
 import net.nextpulse.jacumulus.models.PaymentStatusEnum;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
+/**
+ * Adapter that handles (de)serializing the PaymentStatusEnum
+ */
 public class PaymentStatusEnumAdapter extends XmlAdapter<String, PaymentStatusEnum> {
   
   public String marshal(PaymentStatusEnum e) {
