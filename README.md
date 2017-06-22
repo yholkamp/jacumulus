@@ -11,6 +11,12 @@ Currently offers limited API support but pull requests are welcome.
 
 ## Supported APIs
 
-* Contacts: add
-* Invoices: add, retrieve
+* [Contact: List incoming invoices](https://apidoc.sielsystems.nl/content/contact-list-incoming-invoices)
+* [Contact: List outgoing invoices](https://apidoc.sielsystems.nl/content/contact-list-outgoing-invoices)
+* [Contacts: List](https://apidoc.sielsystems.nl/content/contacts-list-contacts)
+* [Invoice: Add](https://apidoc.sielsystems.nl/content/invoice-add)
 
+
+## Acumulus
+
+[![Acumulus Online Boekhouden](https://www.sielsystems.nl/acumulus/images/affiliates/acumulus_200_56.jpg)](https://www.sielsystems.nl/acumulus/redirect.php?id=121220)

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <contact>
+    <invoice>
+      <token>fb45f4c359e3c57af7512baf9a966c51</token>
+      <entryid>4243</entryid>
+      <entrydate>2016-01-15</entrydate>
+      <invoicenumber>20160098</invoicenumber>
+      <invoicenote/>
+      <invoicedescription>Factuur 20160022</invoicedescription>
+      <paymentstatus>2</paymentstatus>
+      <amount>348.07</amount>
+    </invoice>
+    <invoice>
+      <token>qegwDbCcka3sQvzgJCnKyM7IAu0gigtV</token>
+      <entryid>4242</entryid>
+      <entrydate>2015-12-31</entrydate>
+      <invoicenumber>20150097</invoicenumber>
+      <invoicenote/>
+      <invoicedescription>Factuur 20150022</invoicedescription>
+      <paymentstatus>2</paymentstatus>
+      <amount>398.07</amount>
+    </invoice>
+  </contact>
+</response>

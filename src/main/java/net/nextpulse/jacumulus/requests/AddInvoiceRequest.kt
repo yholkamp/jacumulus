@@ -1,6 +1,6 @@
 package net.nextpulse.jacumulus.requests
 
-import net.nextpulse.jacumulus.models.Customer
+import net.nextpulse.jacumulus.requests.models.Customer
 
 import javax.xml.bind.annotation.XmlElement
 import javax.xml.bind.annotation.XmlRootElement

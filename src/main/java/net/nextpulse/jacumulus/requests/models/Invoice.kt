@@ -1,4 +1,4 @@
-package net.nextpulse.jacumulus.models
+package net.nextpulse.jacumulus.requests.models
 
 import net.nextpulse.jacumulus.util.typeadapters.DateAdapter
 import net.nextpulse.jacumulus.util.typeadapters.PaymentStatusEnumAdapter
@@ -16,7 +16,7 @@ data class Invoice (
     var concepttype: String? = null,
     var concept: String? = null,
     @get:XmlJavaTypeAdapter(PaymentStatusEnumAdapter::class)
-    var paymentstatus: PaymentStatusEnum? = null,
+    var paymentstatus: PaymentStatus? = null,
     var invoicenotes: String? = null,
     @get:XmlElement(name = "line")
     var lines: List<Line>? = null,

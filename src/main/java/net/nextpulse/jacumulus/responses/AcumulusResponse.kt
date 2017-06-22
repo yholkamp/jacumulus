@@ -10,9 +10,9 @@ abstract class AcumulusResponse {
 
     @get:XmlElementWrapper(name = "errors")
     @get:XmlElement(name = "error")
-    var errors: List<ApiMessage>? = null
+    var errors: List<ApiMessage> = ArrayList()
 
     @get:XmlElementWrapper(name = "warnings")
     @get:XmlElement(name = "warning")
-    var warnings: List<ApiMessage>? = null
+    var warnings: List<ApiMessage> = ArrayList()
 }

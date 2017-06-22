@@ -1,10 +1,10 @@
 package net.nextpulse.jacumulus.responses
 
-import net.nextpulse.jacumulus.models.Invoice
-
+import net.nextpulse.jacumulus.responses.models.Invoice
+import java.util.*
 import javax.xml.bind.annotation.XmlElement
+import javax.xml.bind.annotation.XmlElementWrapper
 import javax.xml.bind.annotation.XmlRootElement
-import java.util.ArrayList
 
 /**
  * Response for the list invoices request
@@ -14,7 +14,8 @@ import java.util.ArrayList
  * @see [the api docs for outgoing](https://apidoc.sielsystems.nl/content/contact-list-outgoing-invoices)
  */
 @XmlRootElement(name = "response")
-class ListInvoicesResponse : AcumulusResponse() {
-    @XmlElement(name = "contact")
-    var invoices: List<Invoice> = ArrayList()
-}
+data class ListInvoicesResponse(
+        @get:XmlElementWrapper(name = "contact")
+        @get:XmlElement(name = "invoice")
+        var invoices: List<Invoice> = ArrayList()
+) : AcumulusResponse()

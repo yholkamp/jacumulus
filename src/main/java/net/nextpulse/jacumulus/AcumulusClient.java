@@ -1,11 +1,15 @@
 package net.nextpulse.jacumulus;
 
-import net.nextpulse.jacumulus.models.Contract;
-import net.nextpulse.jacumulus.models.Customer;
+import net.nextpulse.jacumulus.requests.models.ContactStatus;
+import net.nextpulse.jacumulus.requests.models.ContactType;
+import net.nextpulse.jacumulus.requests.models.Contract;
+import net.nextpulse.jacumulus.requests.models.Customer;
 import net.nextpulse.jacumulus.requests.AcumulusRequest;
 import net.nextpulse.jacumulus.requests.AddInvoiceRequest;
+import net.nextpulse.jacumulus.requests.ListContactsRequest;
 import net.nextpulse.jacumulus.requests.ListInvoicesRequest;
 import net.nextpulse.jacumulus.responses.InvoiceResponse;
+import net.nextpulse.jacumulus.responses.ListContactsResponse;
 import net.nextpulse.jacumulus.responses.ListInvoicesResponse;
 import net.nextpulse.jacumulus.util.LoggingInterceptor;
 import net.nextpulse.jacumulus.util.SerializationHelper;
@@ -93,6 +97,39 @@ public class AcumulusClient {
   }
   
   /**
+   * Overloaded listContacts method that will return the first 100 contacts.
+   *
+   * @return list of contacts
+   * @throws JAXBException if the serialization failed for some reason
+   * @throws IOException   if there was an error contacting the Acumulus servers
+   */
+  public ListContactsResponse listContacts() throws JAXBException, IOException {
+    return listContacts(0, 0, null, ContactStatus.All, null);
+  }
+  
+  /**
+   * Full featured listContacts method that allows you to search for or paginate through the contacts using the API.
+   *
+   * @param count       number of contacts to return, 0 for all
+   * @param offset      number of contacts to skip from the beginning of the list
+   * @param filter      optional string to search through contact names, addresses and postal codes
+   * @param status      contact status to return
+   * @param contactType type of contact to return, null for all
+   * @return list of contacts
+   * @throws JAXBException if the serialization failed for some reason
+   * @throws IOException   if there was an error contacting the Acumulus servers
+   */
+  public ListContactsResponse listContacts(Integer count, Integer offset, String filter, ContactStatus status, ContactType contactType) throws JAXBException, IOException {
+    ListContactsRequest request = new ListContactsRequest();
+    request.setRowCount(count);
+    request.setOffset(offset);
+    request.setFilter(filter);
+    request.setContactStatus(status);
+    request.setContactType(contactType);
+    return performAndDeserialize("contacts/contacts_list.php", request, ListContactsResponse.class);
+  }
+  
+  /**
    * Performs a request and deserializes the response.
    *
    * @param path          api path to hit
@@ -106,6 +143,7 @@ public class AcumulusClient {
   private <T> T performAndDeserialize(String path, AcumulusRequest request, Class<T> responseClass) throws JAXBException, IOException {
     String requestBody = serializeRequest(request);
     String responseString = performRequest(path, requestBody);
+    logger.trace("Response body: {}", responseString);
     return SerializationHelper.deserializeXml(responseString, responseClass);
   }
   
