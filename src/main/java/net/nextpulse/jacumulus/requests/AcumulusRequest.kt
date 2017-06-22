@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.*
  * Generic parent class for all API responses.
  */
 @XmlRootElement(name = "myxml")
-@XmlSeeAlso(AddInvoiceRequest::class, ListInvoicesRequest::class, ListContactsRequest::class)
+@XmlSeeAlso(AddInvoiceRequest::class, ListInvoicesRequest::class, ListContactsRequest::class, AddExpenseRequest::class)
 open class AcumulusRequest {
     @get:XmlElement(name = "testmode")
     var testMode: Int = 0

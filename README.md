@@ -32,6 +32,7 @@ And start to use the client:
     AcumulusClient acumulusClient = new AcumulusClient(contact);
     
     // by default the client sets 'testMode' to true, so no API calls will change your data, when you're done testing, set this to false
+    // NOTE: at this time not all API calls support the testmode setting, it's recommend to create a trial account for testing.
     acumulusClient.setTestMode(false);
 
 
@@ -43,6 +44,7 @@ Currently the following API calls have been implemented:
 * [Contact: List outgoing invoices](https://apidoc.sielsystems.nl/content/contact-list-outgoing-invoices)
 * [Contacts: List](https://apidoc.sielsystems.nl/content/contacts-list-contacts)
 * [Invoice: Add](https://apidoc.sielsystems.nl/content/invoice-add)
+* [Expense: Add](https://apidoc.sielsystems.nl/content/expense-add-expense)
 
 
 ## Acumulus

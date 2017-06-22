@@ -63,6 +63,20 @@ public class AcumulusClient {
   }
   
   /**
+   * Adds a Supplier if no supplier was found using the provided supplierId or suppliers email address and adds an
+   * invoice for this supplier.
+   *
+   * @param supplier supplier with embedded expense to add to the system
+   * @return response from the server, containing zero or more errors and warnings
+   * @throws JAXBException if the serialization failed for some reason
+   * @throws IOException   if there was an error contacting the Acumulus servers
+   */
+  public AddExpenseResponse addExpense(Supplier supplier) throws JAXBException, IOException {
+    AddExpenseRequest request = new AddExpenseRequest(supplier);
+    return performAndDeserialize("expenses/expense_add.php", request, AddExpenseResponse.class);
+  }
+  
+  /**
    * Lists the incoming invoices for the specified contactId.
    *
    * @param contactId contact to list the invoices for
