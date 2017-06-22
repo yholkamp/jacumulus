@@ -1,4 +1,4 @@
-package net.nextpulse.jacumulus.responses
+package net.nextpulse.jacumulus.responses.models
 
 /**
  * Class that represents the warnings or errors that may be returned by the Acumulus API.

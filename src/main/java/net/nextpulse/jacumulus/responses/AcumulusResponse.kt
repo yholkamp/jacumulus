@@ -1,5 +1,6 @@
 package net.nextpulse.jacumulus.responses
 
+import net.nextpulse.jacumulus.responses.models.ApiMessage
 import javax.xml.bind.annotation.XmlElement
 import javax.xml.bind.annotation.XmlElementWrapper
 

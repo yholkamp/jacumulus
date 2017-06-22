@@ -1,16 +1,8 @@
 package net.nextpulse.jacumulus;
 
-import net.nextpulse.jacumulus.requests.models.ContactStatus;
-import net.nextpulse.jacumulus.requests.models.ContactType;
-import net.nextpulse.jacumulus.requests.models.Contract;
-import net.nextpulse.jacumulus.requests.models.Customer;
-import net.nextpulse.jacumulus.requests.AcumulusRequest;
-import net.nextpulse.jacumulus.requests.AddInvoiceRequest;
-import net.nextpulse.jacumulus.requests.ListContactsRequest;
-import net.nextpulse.jacumulus.requests.ListInvoicesRequest;
-import net.nextpulse.jacumulus.responses.InvoiceResponse;
-import net.nextpulse.jacumulus.responses.ListContactsResponse;
-import net.nextpulse.jacumulus.responses.ListInvoicesResponse;
+import net.nextpulse.jacumulus.requests.*;
+import net.nextpulse.jacumulus.requests.models.*;
+import net.nextpulse.jacumulus.responses.*;
 import net.nextpulse.jacumulus.util.LoggingInterceptor;
 import net.nextpulse.jacumulus.util.SerializationHelper;
 import okhttp3.*;

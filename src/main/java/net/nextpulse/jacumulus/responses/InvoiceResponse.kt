@@ -1,5 +1,6 @@
 package net.nextpulse.jacumulus.responses
 
+import net.nextpulse.jacumulus.responses.models.PartialInvoice
 import javax.xml.bind.annotation.XmlRootElement
 
 /**
