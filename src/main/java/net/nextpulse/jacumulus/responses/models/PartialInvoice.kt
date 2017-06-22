@@ -1,4 +1,4 @@
-package net.nextpulse.jacumulus.responses
+package net.nextpulse.jacumulus.responses.models
 
 /**
  * Partial invoice object that will be returned by the API.
