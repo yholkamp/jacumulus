@@ -7,10 +7,47 @@
   <groupId>net.nextpulse</groupId>
   <artifactId>jacumulus</artifactId>
   <version>0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <url>https://github.com/yholkamp/jacumulus</url>
+  <name>jacumulus</name>
+  <description>Simple Java client for the FactuurSturen.nl API.</description>
+
+  <developers>
+    <developer>
+      <id>yholkamp</id>
+      <name>Yorick Holkamp</name>
+      <email>yorick@nextpulse.net</email>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>MIT</name>
+      <url>https://opensource.org/licenses/MIT</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/yholkamp/jacumulus</url>
+    <developerConnection>scm:git:ssh:/git@github.com/yholkamp/jacumulus</developerConnection>
+  </scm>
 
   <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <kotlin.version>1.1.2-4</kotlin.version>
     <kotlin.version>1.1.2-5</kotlin.version>
   </properties>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <dependencies>
     <!-- Logging -->
