@@ -1,26 +1,24 @@
 package net.nextpulse.jacumulus.util.typeadapters;
 
-import net.nextpulse.jacumulus.models.PaymentStatusEnum;
+import net.nextpulse.jacumulus.requests.models.PaymentStatus;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
- * Adapter that handles (de)serializing the PaymentStatusEnum
+ * Adapter that handles (de)serializing the PaymentStatus
  */
-public class PaymentStatusEnumAdapter extends XmlAdapter<String, PaymentStatusEnum> {
+public class PaymentStatusEnumAdapter extends XmlAdapter<String, PaymentStatus> {
   
-  public String marshal(PaymentStatusEnum e) {
+  public String marshal(PaymentStatus e) {
     return e.toString();
   }
   
-  public PaymentStatusEnum unmarshal(String val) {
-    switch(val.charAt(0)) {
-      case '1':
-        return PaymentStatusEnum.Due;
-      case '2':
-        return PaymentStatusEnum.Paid;
-      default:
-        throw new IllegalArgumentException("Unknown enum value " + val);
+  public PaymentStatus unmarshal(String val) {
+    for(PaymentStatus statusEnum : PaymentStatus.values()) {
+      if(statusEnum.toString().equals(val)) {
+        return statusEnum;
+      }
     }
+    throw new IllegalArgumentException("Unknown enum value " + val);
   }
 }

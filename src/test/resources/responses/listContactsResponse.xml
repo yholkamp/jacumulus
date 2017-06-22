@@ -2,37 +2,51 @@
 <response>
   <contacts>
     <contact>
-      <contactid></contactid>
+      <contactid>1234</contactid>
       <contactyourid></contactyourid>
-      <contactname></contactname>
-      <contactname1></contactname1>
-      <contactname2></contactname2>
-      <contactstatus></contactstatus>
-      <contacttypeid></contacttypeid>
-      <contacttypename></contacttypename>
-      <contactperson></contactperson>
-      <contactaddress1></contactaddress1>
-      <contactaddress2></contactaddress2>
-      <contactcity></contactcity>
-      <contacttelephone></contacttelephone>
-      <contactemail></contactemail>
-      <contactcountrycode></contaccountrycode>
+      <contactname><![CDATA[123inkt.nl]]></contactname>
+      <contactname1>ContactName1</contactname1>
+      <contactname2>ContactName2</contactname2>
+      <contacttypeid>2</contacttypeid>
+      <contactstatus>1</contactstatus>
+      <contacttypename>Crediteur (leverancier)</contacttypename>
+      <contactperson><![CDATA[]]></contactperson>
+      <contactaddress1><![CDATA[Address 1]]></contactaddress1>
+      <contactaddress2><![CDATA[]]></contactaddress2>
+      <contacttelephone><![CDATA[]]></contacttelephone>
+      <contactemail><![CDATA[]]></contactemail>
+      <contactcity><![CDATA[City]]></contactcity>
+      <contactcountrycode></contactcountrycode>
+      <contactvattype></contactvattype>
+      <contactcostheadingid></contactcostheadingid>
+      <contactinvoicetemplateid></contactinvoicetemplateid>
     </contact>
     <contact>
-      <contactid></contactid>
+      <contactid>4321</contactid>
       <contactyourid></contactyourid>
-      <contactname></contactname>
-      <contactname1></contactname1>
+      <contactname><![CDATA[ABN AMRO Bank N.V.]]></contactname>
+      <contactname1>ABN AMRO Bank N.V.</contactname1>
       <contactname2></contactname2>
-      <contacttypeid></contacttypeid>
-      <contacttypename></contacttypename>
-      <contactperson></contactperson>
-      <contactaddress1></contactaddress1>
-      <contactaddress2></contactaddress2>
-      <contacttelephone></contacttelephone>
-      <contactemail></contactemail>
-      <contactcity></contactcity>
-      <contactcountrycode></contaccountrycode>
+      <contacttypeid>2</contacttypeid>
+      <contactstatus>1</contactstatus>
+      <contacttypename>Crediteur (leverancier)</contacttypename>
+      <contactperson><![CDATA[]]></contactperson>
+      <contactaddress1><![CDATA[]]></contactaddress1>
+      <contactaddress2><![CDATA[]]></contactaddress2>
+      <contacttelephone><![CDATA[]]></contacttelephone>
+      <contactemail><![CDATA[]]></contactemail>
+      <contactcity><![CDATA[]]></contactcity>
+      <contactcountrycode></contactcountrycode>
+      <contactvattype></contactvattype>
+      <contactcostheadingid>19</contactcostheadingid>
+      <contactinvoicetemplateid></contactinvoicetemplateid>
     </contact>
   </contacts>
+  <errors>
+    <count_errors>0</count_errors>
+  </errors>
+  <warnings>
+    <count_warnings>0</count_warnings>
+  </warnings>
+  <status>0</status>
 </response>

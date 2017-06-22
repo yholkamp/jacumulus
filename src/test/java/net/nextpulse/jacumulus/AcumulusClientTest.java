@@ -1,9 +1,8 @@
 package net.nextpulse.jacumulus;
 
-import net.nextpulse.jacumulus.models.Contract;
-import net.nextpulse.jacumulus.models.Customer;
-import net.nextpulse.jacumulus.models.Invoice;
-import net.nextpulse.jacumulus.requests.AcumulusRequest;
+import net.nextpulse.jacumulus.requests.models.Contract;
+import net.nextpulse.jacumulus.requests.models.Customer;
+import net.nextpulse.jacumulus.requests.models.Invoice;
 import net.nextpulse.jacumulus.requests.AddInvoiceRequest;
 import org.junit.Before;
 import org.junit.Test;
@@ -32,8 +31,9 @@ public class AcumulusClientTest {
     customer.setInvoice(invoice);
     AddInvoiceRequest addInvoiceRequest = new AddInvoiceRequest(customer);
     String output = client.serializeRequest(addInvoiceRequest);
-    String expected = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><myxml><testmode>1</testmode><contract><contractcode>4242</contractcode><username>user</username><password>password</password></contract>" +
-        "<customer><invoice><number>12345</number></invoice><email>test@bar.com</email></customer></myxml>";
+    String expected = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><myxml>" +
+        "<contract><contractcode>4242</contractcode><password>password</password><username>user</username></contract><testmode>1</testmode>" +
+        "<customer><email>test@bar.com</email><invoice><number>12345</number></invoice></customer></myxml>";
     assertEquals(expected, output);
   }
   

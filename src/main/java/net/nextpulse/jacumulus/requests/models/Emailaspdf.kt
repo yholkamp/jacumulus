@@ -1,4 +1,4 @@
-package net.nextpulse.jacumulus.models
+package net.nextpulse.jacumulus.requests.models
 
 import javax.xml.bind.annotation.XmlAccessType
 import javax.xml.bind.annotation.XmlAccessorType

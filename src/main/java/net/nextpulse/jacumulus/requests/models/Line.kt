@@ -1,4 +1,4 @@
-package net.nextpulse.jacumulus.models
+package net.nextpulse.jacumulus.requests.models
 
 import net.nextpulse.jacumulus.util.typeadapters.BigDecimalAdapter
 import java.math.BigDecimal
