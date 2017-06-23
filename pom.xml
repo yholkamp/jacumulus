@@ -6,7 +6,7 @@
 
   <groupId>net.nextpulse</groupId>
   <artifactId>jacumulus</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.1</version>
   <packaging>jar</packaging>
   <url>https://github.com/yholkamp/jacumulus</url>
   <name>jacumulus</name>
