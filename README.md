@@ -45,8 +45,3 @@ Currently the following API calls have been implemented:
 * [Contacts: List](https://apidoc.sielsystems.nl/content/contacts-list-contacts)
 * [Invoice: Add](https://apidoc.sielsystems.nl/content/invoice-add)
 * [Expense: Add](https://apidoc.sielsystems.nl/content/expense-add-expense)
-
-
-## Acumulus
-
-[![Acumulus Online Boekhouden](https://www.sielsystems.nl/acumulus/images/affiliates/acumulus_200_56.jpg)](https://www.sielsystems.nl/acumulus/redirect.php?id=121220)
