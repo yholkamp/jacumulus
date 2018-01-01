@@ -10,7 +10,7 @@
   <packaging>jar</packaging>
   <url>https://github.com/yholkamp/jacumulus</url>
   <name>jacumulus</name>
-  <description>Simple Java client for the FactuurSturen.nl API.</description>
+  <description>Simple Java client for the Acumulus.nl API.</description>
 
   <developers>
     <developer>
