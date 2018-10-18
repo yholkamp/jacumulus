@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter
 
 /**
  *
- * @see [https://apidoc.sielsystems.nl/content/expense-add-expense]
+ * @see [https://www.siel.nl/acumulus/API/Expenses/Add_Expense/]
  */
 data class Expense(
         @get:XmlElement(name = "description")
